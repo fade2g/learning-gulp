@@ -4,14 +4,18 @@
   "description": "learning gulp",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp watch",
+    "build": "gulp process-styles && gulp process-scripts && gulp sprites"
   },
   "author": "",
   "license": "MIT",
   "private": true,
   "devDependencies": {
+    "css-sprite": "^0.8.0-beta2",
     "gulp": "^3.8.8",
     "gulp-concat": "^2.4.1",
+    "gulp-if": "^1.2.4",
     "gulp-minify-css": "^0.3.10",
     "gulp-rename": "^1.2.0",
     "gulp-stylus": "^1.3.3",

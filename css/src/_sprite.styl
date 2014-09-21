@@ -1,0 +1,29 @@
+$blue = -2px -2px 50px 50px
+$green = -2px -57px 50px 50px
+$red = -2px -112px 50px 50px
+
+sprite-width($sprite)
+  width $sprite[2]
+
+sprite-height($sprite)
+  height $sprite[3]
+
+sprite-position($sprite)
+  background-position $sprite[0]  $sprite[1]
+
+sprite($sprite)
+  sprite-position($sprite)
+  background-repeat no-repeat
+  overflow hidden
+  display block
+  sprite-width($sprite)
+  sprite-height($sprite)
+
+.icon
+  background-image url('../../img/dest/sprite.png')
+
+@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx)
+  .icon
+    background-image url('../../img/dest/sprite-x2.png')
+    background-size 55px 165px
+
